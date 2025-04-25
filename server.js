@@ -95,7 +95,3 @@ server.delete("/api/employees/:id", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-server.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: err.message || "Something went wrong" });
-});
